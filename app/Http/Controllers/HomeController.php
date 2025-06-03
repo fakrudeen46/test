@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Testimonial;
 
 class HomeController extends Controller
 {
@@ -23,6 +24,20 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $testimonials = Testimonial::all();
+        return view('home', ['testimonials' => $testimonials]);
+    }
+
+    /**
+     * Show the testimonial detail page.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function testimonialDetail(Request $request, $id)
+    {
+        $testimonial = Testimonial::findOrFail($id);
+        return view('testimonial-detail', ['testimonial' => $testimonial]);
     }
 }

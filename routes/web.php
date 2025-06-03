@@ -41,6 +41,7 @@ Route::get('/Contact', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/testimonial/{id}', [App\Http\Controllers\HomeController::class, 'testimonialDetail'])->name('testimonial.detail');
 
 
 /*

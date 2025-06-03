@@ -73,11 +73,11 @@ $Products=App\Models\Products::where('status','=','1')->get();
 <!-- Products Ends Here -->
 <section  class="slideanim"  id="testimonialsdesktopmode" align="center"  >
  
-      @include('components.testimonialsdesktopmode')
+      @include('components.testimonialsdesktopmode', ['testimonials' => $testimonials])
 </section>
 <section  class="slideanim"  id="testimonialsmobilemode" align="center"  >
  
- @include('components.testimonialsmobilemode')
+ @include('components.testimonialsmobilemode', ['testimonials' => $testimonials])
 </section>
 
  
