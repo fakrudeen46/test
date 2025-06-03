@@ -879,3 +879,20 @@
 #10 /app/artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle()
 #11 {main}
 "}
+[2025-06-03 07:45:52] local.ERROR: View path not found. {"exception":"[object] (RuntimeException(code: 0): View path not found. at /app/vendor/laravel/framework/src/Illuminate/Foundation/Console/ViewClearCommand.php:59)
+[stacktrace]
+#0 /app/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate\\Foundation\\Console\\ViewClearCommand->handle()
+#1 /app/vendor/laravel/framework/src/Illuminate/Container/Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#2 /app/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure()
+#3 /app/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#4 /app/vendor/laravel/framework/src/Illuminate/Container/Container.php(662): Illuminate\\Container\\BoundMethod::call()
+#5 /app/vendor/laravel/framework/src/Illuminate/Console/Command.php(211): Illuminate\\Container\\Container->call()
+#6 /app/vendor/symfony/console/Command/Command.php(326): Illuminate\\Console\\Command->execute()
+#7 /app/vendor/laravel/framework/src/Illuminate/Console/Command.php(180): Symfony\\Component\\Console\\Command\\Command->run()
+#8 /app/vendor/symfony/console/Application.php(1096): Illuminate\\Console\\Command->run()
+#9 /app/vendor/symfony/console/Application.php(324): Symfony\\Component\\Console\\Application->doRunCommand()
+#10 /app/vendor/symfony/console/Application.php(175): Symfony\\Component\\Console\\Application->doRun()
+#11 /app/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(201): Symfony\\Component\\Console\\Application->run()
+#12 /app/artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle()
+#13 {main}
+"}

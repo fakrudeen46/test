@@ -14,7 +14,8 @@
  
  Route::post('send-email','UserController@send_email');
 Route::get('/', function () {
-    return view('welcome');
+    $testimonials = \App\Models\Testimonial::all(); // Fetch testimonials
+    return view('welcome', ['testimonials' => $testimonials]); // Pass to welcome view
 });
 Route::get('/about', function () {
     return view('about');
